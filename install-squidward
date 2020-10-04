@@ -8,8 +8,10 @@ norm="`tput sgr0`"
 # START COMMAND
 clear
 read -n 1 -s -r -p "Press ${green}Enter Key${norm} to continue Or Press ${red}CTRL + C${norm} to stop                        ${cyan}'CREATED BY SEVE'${norm}"
+
 #GAWA NI SEVE
 sudo echo
+
 #Run1
 sudo touch /etc/apt/sources.list.d/trusty_sources.list
 echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe" | sudo tee --append /etc/apt/sources.list.d/trusty_sources.list > /dev/null 
@@ -28,8 +30,10 @@ sudo update-rc.d squid3 defaults
 
 #Start squid
 sudo service squid3 start 
+
 #Cleanup
 rm squid3
+
 #Print info
 clear
 echo "====================================="
