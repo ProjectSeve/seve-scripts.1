@@ -37,6 +37,9 @@ rm squid3
 #Clear All Comments on squid conf
 grep -o '^[^#]*' /etc/squid3/squid.conf
 
+#Clear All Empty Lines On squid conf
+sed -r '/^\s*$/d' /etc/squid3/squid.conf
+
 #Print info
 clear
 echo "====================================="
