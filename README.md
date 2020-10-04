@@ -9,7 +9,9 @@ To Start/Stop/Restart Squid Run this:
 
 To Start:
 <pre>sudo sudo service squid3 start<pre>
+
 To Restart:
 <pre>sudo sudo service squid3 restart<pre>
+
 To Stop:
 <pre>sudo sudo service squid3 stop<pre>
