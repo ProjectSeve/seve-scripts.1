@@ -35,6 +35,6 @@ clear
 echo "====================================="
 echo "Squid 3.3.8 is successfully installed!"
 echo "Squid's config is located at '/etc/squid3/squid.conf'"
-echo "You can start/stop/restart squid by using 'sudo service squid3 start/stop/restart'"
+echo "Pag nireboot mo server mo Irestart mo Squid3 mo using this command ${cyan}'sudo service squid3 restart'${norm}"
 echo "${green}============AUTO SCRIPT BY SEVE============${norm}"
 echo "====================================="
