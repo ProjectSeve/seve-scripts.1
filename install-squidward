@@ -21,7 +21,7 @@ sudo apt update
 sudo apt install -y squid3=3.3.8-1ubuntu6 squid=3.3.8-1ubuntu6 squid3-common=3.3.8-1ubuntu6
 
 #Install Ang Ghost/Missing
-wget https://gist.githubusercontent.com/1nikolas/1cd2aa0839a917b7306bafa7559d266c/raw/21f78cba2e1486aa84b9bfefc220857189b19a6a/squid3
+wget https://raw.githubusercontent.com/mathew1357/Squid3.3.8-By-Seve/main/Squid3
 sudo cp squid3 /etc/init.d/
 sudo chmod +x /etc/init.d/squid3
 sudo update-rc.d squid3 defaults
