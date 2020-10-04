@@ -8,10 +8,10 @@ Run this install:
 To Start/Stop/Restart Squid Run this:
 
 To Start:
-<pre>sudo sudo service squid3 start<pre>
+<pre>sudo sudo service squid3 start</pre>
 
 To Restart:
-<pre>sudo sudo service squid3 restart<pre>
+<pre>sudo sudo service squid3 restart</pre>
 
 To Stop:
-<pre>sudo sudo service squid3 stop<pre>
+<pre>sudo sudo service squid3 stop</pre>
