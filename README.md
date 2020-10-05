@@ -5,6 +5,7 @@ Run this to install:
 
 <pre>
 wget https://github.com/mathew1357/Squid3.3.8-By-Seve/blob/main/install-squidward && chmod +x install-squidward && ./install-squidward
+
 </pre>
 
 To Start/Stop/Restart Squid Run this:
