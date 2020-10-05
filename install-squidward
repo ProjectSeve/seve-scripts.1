@@ -4,6 +4,7 @@ green="`tput setaf 2`"
 cyan="`tput setaf 6`"
 bold="`tput bold`"
 norm="`tput sgr0`"
+magen="`tput setaf 5`"
 
 # START COMMAND
 clear
@@ -11,6 +12,26 @@ echo "        ░▒█▀▀▀█░▒█▀▀▀░▒█░░▒█░▒
 echo "        ░░▀▀▀▄▄░▒█▀▀▀░░▒█▒█░░▒█▀▀▀"
 echo "        ░▒█▄▄▄█░▒█▄▄▄░░░▀▄▀░░▒█▄▄▄"
 read -n 1 -s -r -p "Press ${green}Enter Key${norm} to continue Or Press ${red}CTRL + C${norm} to stop"
+echo "[ ████===============] 25% Please Wait..."
+sleep 1
+clear
+echo "[ ███████==========] 52% Please Wait..."
+sleep 1
+clear
+echo "[ ███████████===] 80% Please Wait..."
+sleep 1
+clear
+echo "[ █████████████ ] 100% Done..."
+sleep 1
+clear
+echo "Start Install In ${green}3${norm}"
+sleep 1
+clear
+echo "Start Install In ${cyan}2${norm}"
+sleep 1
+clear
+echo "Start Install In ${magen}1${norm}"
+sleep 1
 #GAWA NI SEVE
 clear
 sudo echo
