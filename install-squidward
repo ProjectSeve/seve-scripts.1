@@ -24,14 +24,36 @@ clear
 echo "[ █████████████ ] 100% Done..."
 sleep 1
 clear
-echo "Start Install In ${green}3${norm}"
+echo "${green}Start Install In ${norm} ╔═══╗"
+echo "                  ║╔═╗║"
+echo "                  ╚╝╔╝║"
+echo "                  ╔╗╚╗║"
+echo "                  ║╚═╝║"
+echo "                  ╚═══╝"
+#SLEEP 1
 sleep 1
 clear
-echo "Start Install In ${cyan}2${norm}"
+#IN SECONDS 1
+echo "${cyan}Start Install In ${norm} ╔═══╗"
+echo "                  ║╔═╗║"
+echo "                  ╚╝╔╝║"
+echo "                  ╔═╝╔╝"
+echo "                  ║║╚═╗"
+echo "                  ╚═══╝"
+#SLEEP 1
 sleep 1
 clear
-echo "Start Install In ${magen}1${norm}"
+#IN SECONDS 1
+echo "${magen}Start Install In ${norm}   ╔╗ "
+echo "                  ╔╝║ "
+echo "                  ╚╗║ "
+echo "                    ║║ "
+echo "                  ╔╝╚╗"
+echo "                  ╚══╝"
+#SLEEP 1
 sleep 1
+clear
+#IN SECONDS 1
 #GAWA NI SEVE
 clear
 sudo echo
