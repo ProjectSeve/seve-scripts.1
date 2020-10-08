@@ -4,7 +4,7 @@ SQUID 3.3.8 on ALL Versions UBUNTU OS Only
 Run this to install: 
 
 <pre>
-wget https://github.com/mathew1357/Squid3.3.8-By-Seve/blob/main/install-squidward && chmod +x install-squidward && ./install-squidward.sh
+wget https://github.com/mathew1357/Squid3.3.8-By-Seve/blob/main/install-squidward && chmod +x install-squidward.sh && ./install-squidward.sh
 </pre>
 
 To Start/Stop/Restart Squid Run this:
