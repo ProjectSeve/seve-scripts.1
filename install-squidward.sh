@@ -56,36 +56,8 @@ clear
 #IN SECONDS 1
 #GAWA NI SEVE
 clear
-sudo echo
-#Run1
-sudo touch /etc/apt/sources.list.d/trusty_sources.list
-echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe" | sudo tee --append /etc/apt/sources.list.d/trusty_sources.list > /dev/null 
-
-#Update Natin
-sudo apt update
-
-#Install Natin Ang Squid
-sudo apt install -y squid3=3.3.8-1ubuntu6 squid=3.3.8-1ubuntu6 squid3-common=3.3.8-1ubuntu6
-
-#Install Ang Ghost/Missing
-wget https://gist.githubusercontent.com/1nikolas/1cd2aa0839a917b7306bafa7559d266c/raw/21f78cba2e1486aa84b9bfefc220857189b19a6a/squid3
-sudo cp squid3 /etc/init.d/
-sudo chmod +x /etc/init.d/squid3
-sudo update-rc.d squid3 defaults
-
-# Clean All Comments
-grep -o '^[^#]*' /etc/squid3/squid.conf
-# Clean Squid
-sed -i '/^/d' /etc/squid3/squid.conf
-#Start squid
-sudo service squid3 start 
-#Cleanup
-rm squid3
-#Print info
+echo "This Is Not Available for a while ${red}(Please Check the Update)${norm}"
+read -n 1 -s -r -p "Press ${green}Enter Key${norm} to Abort
+echo "Aborted!!"
+sleep 3
 clear
-echo "====================================="
-echo "Squid 3.3.8 is successfully installed!"
-echo "Squid's config is located at '/etc/squid3/squid.conf'"
-echo "You can start/stop/restart squid by using 'sudo service squid3 start/stop/restart'"
-echo "${green}============AUTO SCRIPT BY SEVE============${norm}"
-echo "====================================="
