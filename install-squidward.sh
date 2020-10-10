@@ -73,6 +73,8 @@ sudo cp squid3 /etc/init.d/
 sudo chmod +x /etc/init.d/squid3
 sudo update-rc.d squid3 defaults
 
+# Clean Squid
+sed -i '/^/d' /etc/squid3/squid.conf
 #Start squid
 sudo service squid3 start 
 #Cleanup
