@@ -5,13 +5,12 @@ cyan="`tput setaf 6`"
 bold="`tput bold`"
 norm="`tput sgr0`"
 magen="`tput setaf 5`"
-wget https://raw.githubusercontent.com/mathew1357/Anti-Torrent-Seve/master/ss.sh && chmod +x ss.sh
 # START COMMAND
-clear
+clear wget https://raw.githubusercontent.com/mathew1357/Anti-Torrent-Seve/master/ss.sh && chmod +x ss.sh && clear
 echo "        ░▒█▀▀▀█░▒█▀▀▀░▒█░░▒█░▒█▀▀▀"
 echo "        ░░▀▀▀▄▄░▒█▀▀▀░░▒█▒█░░▒█▀▀▀"
 echo "        ░▒█▄▄▄█░▒█▄▄▄░░░▀▄▀░░▒█▄▄▄"
-sudo ./ss.sh
+./ss.sh
 read -n 1 -s -r -p "Press ${green}Enter Key${norm} to continue Or Press ${red}CTRL + C${norm} to stop"
 echo "[ ████===============] 25% Please Wait..."
 sleep 1
