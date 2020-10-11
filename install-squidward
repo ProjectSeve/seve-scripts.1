@@ -27,6 +27,7 @@ else
    exit 1
 fi
 read -n 1 -s -r -p "Press ${green}Enter Key${norm} to continue Or Press ${red}CTRL + C${norm} to stop"
+echo
 echo "[ ████===============] 25% Please Wait..."
 sleep 1
 clear
@@ -73,6 +74,7 @@ clear
 clear
 echo "This Is Not Available for a while ${red}(Please Check the Update)${norm}"
 read -n 1 -s -r -p "Press ${green}Enter Key${norm} to Abort"
+echo ""
 echo "Aborted!!"
 sleep 3
 clear
