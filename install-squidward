@@ -10,16 +10,16 @@ magen="`tput setaf 5`"
 # Created By SEVE MALACHI
 # Start Squid Install
 # Hello
-PASS="sevescripts"
+name="sevescripts"
 rm install-squidward && clear
 # Start Pass
 echo "        ░▒█▀▀▀█░▒█▀▀▀░▒█░░▒█░▒█▀▀▀"
 echo "        ░░▀▀▀▄▄░▒█▀▀▀░░▒█▒█░░▒█▀▀▀"
 echo "        ░▒█▄▄▄█░▒█▄▄▄░░░▀▄▀░░▒█▄▄▄"
 # Start Pass
-read -s -p "Password: " mypassword
+read -s -p "Password: " pass
 echo ""
-if [ "$mypassword" == "$PASS" ] 
+if [ "$pass" == "$name" ] 
 then 
    echo "Success!!"
 else 
