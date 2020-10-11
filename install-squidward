@@ -57,7 +57,7 @@ clear
 #GAWA NI SEVE
 clear
 echo "This Is Not Available for a while ${red}(Please Check the Update)${norm}"
-read -n 1 -s -r -p "Press ${green}Enter Key${norm} to Abort
+read -n 1 -s -r -p "Press ${green}Enter Key${norm} to Abort"
 echo "Aborted!!"
 sleep 3
 clear
