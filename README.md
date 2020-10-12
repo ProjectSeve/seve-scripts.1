@@ -1,4 +1,4 @@
-# Squid3.3.8-By-Seve
+# SEVE SCRIPT #1
 SQUID 3.3.8 on ALL Versions UBUNTU OS Only
 
 Run this to install: 
