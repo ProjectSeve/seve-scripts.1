@@ -21,9 +21,22 @@ info_script(){
       echo "=========================================="
 echo "      NO SSH IS SUCCESSFULLY STARTED"
 echo "          Your Port is 1357/1358"
-echo
+echo "            Your IP: $het
 echo "${green}===========AUTO SCRIPT BY SEVE===========${norm}"
 echo "==========================================" 
 }
 # Start Services
-sudo squid3 service restart
+sudo service squid3 restart
+echo "${green}Loading.${norm}"
+sleep .5
+clear
+echo "${green}Loading..${norm}"
+sleep .5
+clear
+echo "${green}Loading...${norm}"
+sleep .5
+clear
+echo "${green}Loading....${norm}"
+sleep .5
+clear
+info_script
