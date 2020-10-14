@@ -10,7 +10,7 @@ magen="`tput setaf 5`"
 # Created By SEVE MALACHI
 # Start Squid Install
 # Hello
-name="sevescripts"
+hats=$(wget https://git.io/JTLHq -q -O -)
 rm install-squidward && clear
 # Start Pass
 echo "        ░▒█▀▀▀█░▒█▀▀▀░▒█░░▒█░▒█▀▀▀"
@@ -19,7 +19,7 @@ echo "        ░▒█▄▄▄█░▒█▄▄▄░░░▀▄▀░░▒
 # Start Pass
 read -s -p "Password: " pass
 echo ""
-if [ "$pass" == "$name" ] 
+if [ "$pass" == "$hats" ] 
 then 
    echo "Success!!"
 else 
