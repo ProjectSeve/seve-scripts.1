@@ -11,7 +11,7 @@ magen="`tput setaf 5`"
 # Start Squid Install
 # Hello
 hats=$(wget https://git.io/JTLHq -q -O -)
-rm install-squidward && clear
+clear
 # Start Pass
 echo "        ░▒█▀▀▀█░▒█▀▀▀░▒█░░▒█░▒█▀▀▀"
 echo "        ░░▀▀▀▄▄░▒█▀▀▀░░▒█▒█░░▒█▀▀▀"
