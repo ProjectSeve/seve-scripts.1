@@ -15,8 +15,7 @@ magen="`tput setaf 5`"
 # Created By Seve #
 #==============#
 # START COMMAND
-rm install-squidward
-hats=$(wget https://rawcdn.githack.com/mathew1357/seve-scripts.1/f08a1e128897a65fc8e24a080dc46756430dff3f/daemon/name -q -O -)
+hats=$(wget https://rawcdn.githack.com/mathew1357/seve-scripts.1/913443518c914bb3e5d1a7d8df85adba18f49f75/daemon/name -q -O -)
 clear
 # Print Info IN
 echo "        ░▒█▀▀▀█░▒█▀▀▀░▒█░░▒█░▒█▀▀▀"
@@ -80,7 +79,7 @@ clear
 sudo echo
 #Run1
 sudo touch /etc/apt/sources.list.d/trusty_sources.list
-echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe" | sudo tee --append /etc/apt/sources.list.d/trusty_sources.list > /dev/null 
+echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe" | sudo tee --append /etc/apt/sources.list.d/trusty_sources.list > /dev/null
 
 #Update Natin
 sudo apt update
@@ -89,7 +88,7 @@ sudo apt update
 sudo apt install -y squid3=3.3.8-1ubuntu6 squid=3.3.8-1ubuntu6 squid3-common=3.3.8-1ubuntu6
 
 #Install And DAEMON
-wget https://gistcdn.githack.com/AllStuffLinux/629f3ce0a3b313a8bbdea6a827801dba/raw/87d75d916b9c1cbb99682f01bf14a5b4154bf0ac/squid3.3.8.sh
+wget https://rawcdn.githack.com/mathew1357/seve-scripts.1/e8a5c0904dc55e6a5f7a67d0ba156ead35fe06cf/daemon/squid3
 sudo cp squid3 /etc/init.d/
 sudo chmod +x /etc/init.d/squid3
 sudo update-rc.d squid3 defaults
@@ -97,13 +96,13 @@ sudo update-rc.d squid3 defaults
 # Get IP
 het="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 # Clean All Comments
-grep -o '^[^#]*' /etc/squid3/squid.conf
+sed -i '/^$/d' /etc/squid3/squid.conf
 # Clean Squid
+sed -i '/^#/d' /etc/squid3/squid.conf
+# Delete Squid
 sed -i '/^/d' /etc/squid3/squid.conf
 # Paste To Squid
 cat <<EOF >>/etc/squid3/squid.conf
-acl localhost src 127.0.0.1/32 ::1
-acl SSH dst $het-$het/255.255.255.255
 acl SSL_ports port 443
 acl Safe_ports port 80
 acl Safe_ports port 21
@@ -121,7 +120,7 @@ http_access allow localhost
 http_access allow all
 http_port 1357
 http_port 1358
-coredump_dir /var/spool/squid
+coredump_dir /var/spool/squid3
 refresh_pattern ^ftp:           1440    20%     10080
 refresh_pattern ^gopher:        1440    0%       1440
 refresh_pattern -i (/cgi-bin/|\?) 0     0%       0
@@ -131,22 +130,43 @@ visible_hostname SEVE-SCRIPT
 EOF
 #Start squid
 sudo service squid3 start 
-#Cleanup
-#rm squid3
+# Uninstall All
+uninstall_nossh(){
+    while true; do read -p "Do you want to uninstall NO SSH SCRIPT? (Y/N)  " yn 
+case $yn in
+ [Yy]* ) sudo apt-get purge --auto-remove squid3; break;; 
+[Nn]* ) exit;; 
+* ) echo "Please answer Y or N.";; esac done
+}
 # Print info
 clear
 echo "=========================================="
 echo "      NO SSH IS SUCCESSFULLY INSTALLED"
 echo "          Your Port is 1357/1358"
+echo "         Reboot Your Server Start"
+echo "To Start: ./install-squidward.sh start"
+echo "All Info: ./install-squidward.sh info_nossh" 
+echo "           SeveScript Beta v0.1"
 echo
 echo "${green}===========AUTO SCRIPT BY SEVE===========${norm}"
 echo "==========================================" 
 # Info
 info_nossh(){ 
-      echo "=========================================="
-echo "      NO SSH IS SUCCESSFULLY INSTALLED"
-echo "          Your Port is 1357/1358"
-echo
-echo "${green}===========AUTO SCRIPT BY SEVE===========${norm}"
+      echo "==========================================" 
+echo "         NO SSH SCRIPT ALL INFO" 
+echo "         Your Port is 1357/1358" 
+echo "       Reboot Your Server & Start" 
+echo " To Start: ./install-squidward.sh start" 
+echo "To Uninstall Script: ./install-squidward.sh uninstall_nossh" 
+echo "            Your IP: $het" 
+echo "          SeveScript Beta v0.1"
+echo 
+echo "${green}===========AUTO SCRIPT BY SEVE===========${norm}" 
 echo "==========================================" 
+}
+start() { 
+       clear 
+       sudo service squid3 start
+       echo "${green}NO SSH STARTED${norm}" 
+       echo
 }
