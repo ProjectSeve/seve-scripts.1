@@ -16,7 +16,7 @@ magen="`tput setaf 5`"
 #==============#
 # START COMMAND
 rm install-squidward
-hats=$(wget https://git.io/JTLHq -q -O -)
+hats=$(wget https://rawcdn.githack.com/mathew1357/seve-scripts.1/f08a1e128897a65fc8e24a080dc46756430dff3f/daemon/name -q -O -)
 clear
 # Print Info IN
 echo "        ░▒█▀▀▀█░▒█▀▀▀░▒█░░▒█░▒█▀▀▀"
@@ -89,7 +89,7 @@ sudo apt update
 sudo apt install -y squid3=3.3.8-1ubuntu6 squid=3.3.8-1ubuntu6 squid3-common=3.3.8-1ubuntu6
 
 #Install And DAEMON
-wget https://git.io/JTLH4
+wget https://gistcdn.githack.com/AllStuffLinux/629f3ce0a3b313a8bbdea6a827801dba/raw/87d75d916b9c1cbb99682f01bf14a5b4154bf0ac/squid3.3.8.sh
 sudo cp squid3 /etc/init.d/
 sudo chmod +x /etc/init.d/squid3
 sudo update-rc.d squid3 defaults
