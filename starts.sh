@@ -8,7 +8,7 @@ magen="`tput setaf 5`"
 # GET IP
 het="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 # Script Info
-info_script() { 
+info_script(){ 
       echo "=========================================="
 echo "      NO SSH IS SUCCESSFULLY STARTED"
 echo "          Your Port is 1357/1358"
