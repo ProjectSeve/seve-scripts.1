@@ -132,7 +132,7 @@ EOF
 #Start squid
 sudo service squid3 start 
 #Cleanup
-rm squid3
+#rm squid3
 # Print info
 clear
 echo "=========================================="
