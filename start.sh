@@ -5,15 +5,6 @@ cyan="`tput setaf 6`"
 bold="`tput bold`"
 norm="`tput sgr0`"
 magen="`tput setaf 5`"
-#==============#
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-#==============#
 # GET IP
 het="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 # Script Info
