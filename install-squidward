@@ -133,34 +133,6 @@ EOF
 sudo service squid3 start 
 #Cleanup
 rm squid3
-#Inf
-action=$1
-[ -z $1 ] && action=info
-case "$action" in 
-uninstall) 
-${action}_nossh
-;; 
-*) 
-echo "Arguments error! [${action}]" 
-echo "Usage: `basename $0` [uninstall|info]" 
-;;
-esac
-# Uninstall All
-uninstall_nossh(){
-    printf "Are you sure ${red}Uninstall${norm} NO-SSH (SeveScript.1)? (y/n)"
-    printf "\n"
-    read -p "(Default: n):" answer
-    [ -z ${answer} ] && answer="n"
-    if [ "${answer}" == "y" ] || [ "${answer}" == "Y" ]; then 
-        sudo apt-get purge --auto-remove squid3 
-        clear
-        echo "SeveScript.1 Uninstall Success!"
-    else
-        echo
-        echo "Uninstall Cancelled!!"
-        echo
-    fi
-}
 # Print info
 clear
 echo "=========================================="
