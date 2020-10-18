@@ -5,22 +5,18 @@ cyan="`tput setaf 6`"
 bold="`tput bold`"
 norm="`tput sgr0`"
 magen="`tput setaf 5`"
-#==============#
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-# Created By Seve #
-#==============#
 # START COMMAND
-hats=$(wget https://rawcdn.githack.com/mathew1357/seve-scripts.1/913443518c914bb3e5d1a7d8df85adba18f49f75/daemon/name -q -O -)
+# Bin/Bash
+# Created By SEVE MALACHI
+# Start Squid Install
+# Hello
+hats=$(wget https://git.io/JTLHq -q -O -)
 clear
-# Print Info IN
+# Start Pass
 echo "        ░▒█▀▀▀█░▒█▀▀▀░▒█░░▒█░▒█▀▀▀"
 echo "        ░░▀▀▀▄▄░▒█▀▀▀░░▒█▒█░░▒█▀▀▀"
 echo "        ░▒█▄▄▄█░▒█▄▄▄░░░▀▄▀░░▒█▄▄▄"
+# Start Pass
 read -s -p "Password: " pass
 echo ""
 if [ "$pass" == "$hats" ] 
@@ -76,97 +72,9 @@ clear
 #IN SECONDS 1
 #GAWA NI SEVE
 clear
-sudo echo
-#Run1
-sudo touch /etc/apt/sources.list.d/trusty_sources.list
-echo "deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe" | sudo tee --append /etc/apt/sources.list.d/trusty_sources.list > /dev/null
-
-#Update Natin
-sudo apt update
-
-#Install Natin Ang Squid
-sudo apt install -y squid3=3.3.8-1ubuntu6 squid=3.3.8-1ubuntu6 squid3-common=3.3.8-1ubuntu6
-
-#Install And DAEMON
-wget https://rawcdn.githack.com/mathew1357/seve-scripts.1/e8a5c0904dc55e6a5f7a67d0ba156ead35fe06cf/daemon/squid3
-sudo cp squid3 /etc/init.d/
-sudo chmod +x /etc/init.d/squid3
-sudo update-rc.d squid3 defaults
-
-# Get IP
-het="$(dig +short myip.opendns.com @resolver1.opendns.com)"
-# Clean All Comments
-sed -i '/^$/d' /etc/squid3/squid.conf
-# Clean Squid
-sed -i '/^#/d' /etc/squid3/squid.conf
-# Delete Squid
-sed -i '/^/d' /etc/squid3/squid.conf
-# Paste To Squid
-cat <<EOF >>/etc/squid3/squid.conf
-acl SSL_ports port 443
-acl Safe_ports port 80
-acl Safe_ports port 21
-acl Safe_ports port 443
-acl Safe_ports port 70
-acl Safe_ports port 210
-acl Safe_ports port 1025-65535
-acl Safe_ports port 280
-acl Safe_ports port 488
-acl Safe_ports port 591
-acl Safe_ports port 777
-acl CONNECT method CONNECT
-acl all src 0.0.0.0/0
-http_access allow localhost
-http_access allow all
-http_port 1357
-http_port 1358
-coredump_dir /var/spool/squid3
-refresh_pattern ^ftp:           1440    20%     10080
-refresh_pattern ^gopher:        1440    0%       1440
-refresh_pattern -i (/cgi-bin/|\?) 0     0%       0
-refresh_pattern (Release|Packages(.gz)*)$       0       20%
-refresh_pattern .               0        20%     4320
-visible_hostname SEVE-SCRIPT
-EOF
-#Start squid
-sudo service squid3 start 
-# Uninstall All
-uninstall_nossh(){
-    while true; do read -p "Do you want to uninstall NO SSH SCRIPT? (Y/N)  " yn 
-case $yn in
- [Yy]* ) sudo apt-get purge --auto-remove squid3; break;; 
-[Nn]* ) exit;; 
-* ) echo "Please answer Y or N.";; esac done
-}
-# Print info
+echo "This Is Not Available for a while ${red}(Please Check the Update)${norm}"
+read -n 1 -s -r -p "Press ${green}Enter Key${norm} to Abort"
+echo ""
+echo "Aborted!!"
+sleep 3
 clear
-echo "=========================================="
-echo "      NO SSH IS SUCCESSFULLY INSTALLED"
-echo "          Your Port is 1357/1358"
-echo "         Reboot Your Server Start"
-echo "To Start: ./install-squidward.sh start"
-echo "All Info: ./install-squidward.sh info_nossh" 
-echo "           SeveScript Beta v0.1"
-echo
-echo "${green}===========AUTO SCRIPT BY SEVE===========${norm}"
-echo "==========================================" 
-# Info
-info_nossh(){ 
-      echo "==========================================" 
-echo "         NO SSH SCRIPT ALL INFO" 
-echo "         Your Port is 1357/1358" 
-echo "       Reboot Your Server & Start" 
-echo " To Start: ./install-squidward.sh start" 
-echo "To Uninstall Script: ./install-squidward.sh uninstall_nossh" 
-echo "            Your IP: $het" 
-echo "          SeveScript Beta v0.1"
-echo 
-echo "${green}===========AUTO SCRIPT BY SEVE===========${norm}" 
-echo "==========================================" 
-}
-start() { 
-       clear 
-       sudo service squid3 start
-       echo "${green}NO SSH STARTED${norm}" 
-       echo
-}
